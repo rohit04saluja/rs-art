@@ -25,6 +25,10 @@ div.card-container {
 	overflow: hidden;
 }
 
+div.card-container hr {
+	min-width: 100px;
+}
+
 div.hover:hover div.card-image-overlay, div.hover:focus div.card-image-overlay {
 	opacity: 1;
 }
