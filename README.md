@@ -1,1 +1,1 @@
-# rs-wallpapers
+# RSWallpapers
