@@ -6,3 +6,70 @@ body {
 div {
   overflow: hidden;
 }
+
+div.main-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+}
+
+div.card-container {
+	margin: 5px;
+	min-width: 600px;
+	min-height: 400px;
+	width: 600px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+div.hover:hover div.card-image-overlay, div.hover:focus div.card-image-overlay {
+	opacity: 1;
+}
+
+div.hover:hover div.card-title, div.hover:focus div.card-title {
+	opacity: 1;
+}
+
+div.hover:hover hr, div.hover:focus hr {
+	width: 100%;
+}
+
+div.card-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+div.card-image-overlay{
+	height: inherit;
+	width: inherit;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: opacity 0.25s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+div.card-title {
+	font-size: 32px;
+	width: inherit;
+	height: inherit;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.25s cubic-bezier(0.65, 0.05, 0.36, 1) 0.25s;
+}
+
+div.card-title > span > hr {
+	width: 0px;
+	transition: width 0.25s cubic-bezier(0.55, 0.09, 0.68, 0.53) 0.25s;
+}
+
+div.card-image-overlay div.card-title {
+	color: #fff;
+}
