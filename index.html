@@ -1,13 +1,36 @@
-<html>
+<html ng-app>
   <head>
     <!-- Title of the page -->
     <title>RS Wallpapers</title>
 
     <!-- Attaching custom style sheet for the page -->
     <link href="stylesheet/style.css" rel="stylesheet">
+
+    <!-- Loader stylesheet -->
+		<link rel="stylesheet" type="text/css" href="../loader/loader.css"
+
+    <!-- font icon script from fontawesom -->
+		<script src="https://use.fontawesome.com/ed7f88508b.js"></script>
+
+    <!-- Attaching the pre requisites for Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="app/index.js"></script>
+
+		<!-- Attaching the loader JS -->
+		<script src="../loader/loader.js"></script>
+
+    <script>
+      window.onload = function() {
+        loaded();
+      }
+    </script>
   </head>
 
   <body>
+    <div ng-include="'../loader/loader.html'"></div>
+
+    <header ng-include="'../header.html'"></header>
+
     <div class="main-container">
       <div class="card-container hover">
         <img src=""></img>
