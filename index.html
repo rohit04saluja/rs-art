@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app=rs-art>
   <head>
     <!-- Title of the page -->
     <title>RS Wallpapers</title>
@@ -34,14 +34,16 @@
 
     <header ng-include="'../header.html'"></header>
 
-    <div class="main-container">
-      <div class="card-container hover">
-        <img src=""></img>
-        <div class="card-image-overlay">
-          <div class="card-title">
-            <span>
-              <hr>title-title-title<hr>
-            </span>
+    <div class="main-container" ng-controller="mainContainer">
+      <div ng-repeat="json in jsonObj">
+        <div class="card-container hover">
+          <img src="{{json.src}}"></img>
+          <div class="card-image-overlay">
+            <div class="card-title">
+              <span>
+                <hr>{{json.title}}<hr>
+              </span>
+            </div>
           </div>
         </div>
       </div>
